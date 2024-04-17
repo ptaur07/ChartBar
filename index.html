@@ -1,0 +1,81 @@
+<div>
+    <canvas id="myChart"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script> 
+  <script>
+    var ctx = document.getElementById('myChart');
+   Chart.register(ChartDataLabels); 
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Yellow', 'Green',],
+        datasets: [{
+          label: 'green',
+          data: [12, 19, 3, 5, 2, 3],
+          
+          borderWidth: 1
+        },{label: 'red',
+          data: [22, 29, 13, 15, 12, 13]
+          },
+          {label: 'yellow',
+          data: [22, 29, 13, 15, 12, 13]
+          },
+          
+  ]
+      },
+      options: { indexAxis: 'y',
+  plugins:{ tooltip:{mode: 'index'},
+  datalabels: {align: 'top', anchor: 'end', color:'black', font: { size: 10}},
+  }, 
+        scales: {
+         
+          y: {
+            beginAtZero: true, 
+          }
+        }
+      }
+    });
+  </script>
+
+   <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script> 
+  <script>
+    var ctx = document.getElementById('myChart');
+   Chart.register(ChartDataLabels); 
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red',  'Yellow', 'Green'],
+        datasets: [{
+          label: 'green',
+          data: [12, 19, 3, 5, 2, 3],
+          
+          borderWidth: 1
+        },{label: 'red',
+          data: [22, 29, 13, 15, 12, 13]
+        },{
+          label: 'yellow',
+          data: [22, 29, 13, 15, 12, 13]
+        },
+          
+  ]
+      },
+      options: { indexAxis: 'y',
+  plugins:{ tooltip:{mode: 'index'},
+  datalabels: {align: 'top', anchor: 'end', color:'black', font: { size: 10}},
+  }, 
+        scales: {
+          x: {stacked: true,},
+          y: {
+            beginAtZero: true, stacked: true, 
+          }
+        }
+      }
+    });
+  </script>
